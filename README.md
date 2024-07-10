@@ -1,8 +1,42 @@
-# React + Vite
+# Typing Speed Test Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application to test your typing speed. It calculates your typing speed in words per minute (WPM).
 
-Currently, two official plugins are available:
+$\color{red}{\textsf{This project is a clone from my previous GitHub repository.}} $<a href="https://github.com/PharadolBrown/portfolio-combine-react-project/tree/main/src/AllApp/AppTypingTest" traget="_blank">this repository</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
+You can try out the live demo [here](https://typing-speed-test-game-lovat.vercel.app/).
+
+![Project Screenshot](https://img2.pic.in.th/pic/typin-speed-test-game.png)
+
+## Features
+- Real-time timer to track how long it takes to complete the typing test.
+- Calculates words per minute (WPM).
+- Provides immediate feedback with color-coded words (correct in green, incorrect in yellow).
+
+## Technologies Used
+- React.js
+- TailwindCSS
+
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/Pharadol/typing-speed-test-game
+    ```
+
+2. Navigate to the project directory:
+    ```sh
+    cd typing-speed-test-game
+    ```
+
+3. Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+4. Start the development server:
+    ```sh
+    npm run dev
+    ```
+
