@@ -49,7 +49,7 @@ function Timer(props) {
   const minutes = timeElapsed / 60;
 
   return (
-    <div className="flex justify-center flex-col items-center md:flex-row bg-gradient-to-r from-blue-900 to-green-500">
+    <div className="flex justify-center flex-col items-center md:flex-row ">
       <p className="border-4 flex flex-col w-min rounded-full justify-center items-center p-5 text-3xl">
         {timeElapsed} <b className="font-thin text-base">seconds</b>
       </p>
@@ -104,35 +104,37 @@ function AppTypingTest() {
   }
 
   return (
-    <div className="w-11/12 md:w-10/12 lg:w-6/12 mx-auto md:pt-6 text-white">
-      <h1 className="text-3xl font-bold md:text-5xl text-center pt-12 md:pt-20 pb-10 ">
-        Typing Speed Test Game
-      </h1>
+    <div className="bg-gradient-to-r from-blue-900 to-green-500 h-screen">
+      <section className="w-11/12 md:w-10/12 lg:w-6/12 mx-auto md:pt-6 text-white">
+        <h1 className="text-3xl font-bold md:text-5xl text-center pt-12 md:pt-20 pb-10 ">
+          Typing Speed Test Game
+        </h1>
 
-      <Timer
-        startCounting={startCounting}
-        correctWords={correctWordArray.filter(Boolean).length}
-      />
+        <Timer
+          startCounting={startCounting}
+          correctWords={correctWordArray.filter(Boolean).length}
+        />
 
-      <p className="text-xl mt-10 mb-5">
-        {cloud.current.map((word, index) => {
-          return (
-            <Word
-              key={index}
-              text={word}
-              active={index === activeWordIndex}
-              correct={correctWordArray[index]}
-            />
-          );
-        })}
-      </p>
-      <input
-        placeholder="Start typing..."
-        type="text"
-        className="border-2 w-full h-12 text-xl px-2 rounded-md shadow-lg text-black"
-        value={userInput}
-        onChange={(e) => processInput(e.target.value)}
-      />
+        <p className="text-xl mt-10 mb-5">
+          {cloud.current.map((word, index) => {
+            return (
+              <Word
+                key={index}
+                text={word}
+                active={index === activeWordIndex}
+                correct={correctWordArray[index]}
+              />
+            );
+          })}
+        </p>
+        <input
+          placeholder="Start typing..."
+          type="text"
+          className="border-2 w-full h-12 text-xl px-2 rounded-md shadow-lg text-black"
+          value={userInput}
+          onChange={(e) => processInput(e.target.value)}
+        />
+      </section>
     </div>
   );
 }
